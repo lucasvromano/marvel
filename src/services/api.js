@@ -1,8 +1,6 @@
 
 import md5 from 'md5';
 
-// const publickey = '3911769cb55fc82c80fab23ed6c1cba0';
-// const privatekey = '4e63cd131df325591311f61ae13f6a7b22fffb07';
 const publickey = '7da7bd40168e15ac0d15d2a2794e3dfc';
 const privatekey = '73b9212d73ad1127e19a7294b440e0ac8295f3fa';
 const ts = new Date().getTime();
