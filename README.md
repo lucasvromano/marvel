@@ -2,7 +2,15 @@
 
 Para iniciar o projeto, certifique-se de ter o **node** e o **yarn** instalados.
 
-Para baixar as dependências, na pasta do projeto rode do comando `yarn`.
+Esta aplicação faz uso das APIs da Marvel, para consumir essas APIs é necessário se cadastrar como um desenvolvedor através desse [link](https://www.marvel.com/signin?referer=https%3A%2F%2Fdeveloper.marvel.com%2Faccount). Após isso serão fornecidas duas chaves, uma pública e outra privada. **Salve essas chaves, pois elas deverão ser adicionadas ao projeto, caso contrário as APIs não irão funcionar como o esperado. **
+
+Para configurar as chaves, na raíz do projeto abra o arquivo **.env**. Nele háverá duas linhas uma referente a chave pública e outra a chave privada, adicione as chaves que foram obtidas no site da Marvel em seus respectivos lugares, como no exemplo abaixo:
+
+`REACT_APP_PRIVATE_KEY=MY_PRIVATE_KEY`
+
+`REACT_APP_PUBLIC_KEY=MY_PUBLIC_KEY`
+
+Após adicionar as chaves no arquivo **.env**, ainda na pasta do projeto baixe as dependências, executando o comando `yarn`.
 
 Após baixar as dependências, rode o comando `yarn start`, para iniciar a aplicação em seu navegador.
 
