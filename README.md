@@ -42,7 +42,7 @@ Essa é a página inicial. Ao ser criada ela irá realizar uma busca por persona
 Essa página é exibida após o clique em um card de personagem na tela de **characters**. Ao carregar, a página irá realizar uma consulta na API da Marvel para carregar os detalhes do personagem, como uma lista de seus principais quadrinhos.
 
 ### index.js
-O index.js, localizado na raiz da pasta **src**, corresponde a criação do aplicação em React, buscando como referência o id **root**, localizado no arquivo index.html da pasta public.
+O index.js, localizado na raiz da pasta **src**, corresponde a criação da aplicação em React, buscando como referência o id **root**, localizado no arquivo index.html da pasta public.
 
 ### routes.js
 O arquivo routes.js é o responsável gerenciar as rotas da aplicação, esse arquivo deverá ser modificado, caso seja necessário criar/modificar/excluir uma rota.
