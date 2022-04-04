@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Marvel App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para iniciar o projeto, certifique-se de ter o **node** e o **yarn** instalados.
 
-## Available Scripts
+Para baixar as dependências, na pasta do projeto rode do comando `yarn`.
 
-In the project directory, you can run:
+Após baixar as dependências, rode o comando `yarn start`, para iniciar a aplicação em seu navegador.
 
-### `npm start`
+## Estrutura do Projeto
+Na raíz do projeto, dentro da pastar **src** haverá a seguinte estrutura de pastas e arquivos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Assets
+Essa é a pasta raíz das que poderão receber arquivos diversos tipos de arquivos, como **images**, **icons**, **audios**, **videos**, etc. Aqui está sendo utilizada apenas a pasta **images**, caso o projeto escale para receber novos arquivos, eles poderão serem adicionados em suas respectivas pastas, como citado anteriormente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Components
+Essa pasta é a responsável por receber os componentes da aplicação. Atualmente ela está composta pelo componente de **Card** e **Search**.
 
-### `npm test`
+#### Card
+O componente Card recebe as seguintes propriedades: **name**, **path**, **extension**, **isCharacter**. A propriedade name será inserida no local onde deverá ser iniciado o nome em destaque do card. A Propriedade path e extension serão concatenadas e inseridas na tag de imagem, resultado em um caminho completo da imagem. A propriedade isCharacter é um valor booleado, que deverá ser inserido apenas no card de personagens, através dele é realizado uma condição para adição de classes específicas para esse card.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Search
+O componente Search recebe as seguintes propriedades: **value** e **onChange**. A propriedade value receberá o valor do seu input e a proprierdade onChange, a função quando seu valor é mudado.
 
-### `npm run build`
+### Services
+Na pasta services é possível localizar o arquivo **api.js**. É nele onde estão localizadas as funções que buscam os resultados das APIs da Marvel. Atualmente, como são poucas funções, todas estão presentes no mesmo arquivo, caso o projeto precise de mais chamadas, o ideal seria dividir essas funções em arquivos e pastas separadas, para manter uma melhor organização.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Views
+Essa pasta é a responsável por receber cada página da aplicação. Atualmente tenhos duas páginas **Characters** e **Details**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Characters
+Essa é a página inicial. Ao ser criada ela irá realizar uma busca por personagens da Marvel e irá retornar seus valores preenchendo o componente de **cards**, que será exibido em uma lista. Ainda nessa página é possível realizar uma busca por um personagem através do componente **search**, então a lista de cards será atualizada com os novos resultados. Ao clicar em um personagem, você será direcionado para a página de detalhes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Details
+Essa página é exibida após o clique em um card de personagem na tela de **characters**. Ao carregar, a página irá realizar uma consulta na API da Marvel para carregar os detalhes do personagem, como uma lista de seus principais quadrinhos.
 
-### `npm run eject`
+### index.js
+O index.js, localizado na raiz da pasta **src**, corresponde a criação do aplicação em React, buscando como referência o id **root**, localizado no arquivo index.html da pasta public.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### routes.js
+O arquivo routes.js é o responsável gerenciar as rotas da aplicação, esse arquivo deverá ser modificado, caso seja necessário criar/modificar/excluir uma rota.
