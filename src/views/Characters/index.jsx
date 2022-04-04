@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom'
 import Card from '../../components/Card/index';
 import Search from '../../components/Search/index';
 
+
 const Characters = () => {
+
   const [characters, setCharacters] = useState(null);
   const [input, setInput] = useState('');
 
