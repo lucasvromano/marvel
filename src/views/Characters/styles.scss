@@ -1,0 +1,31 @@
+.characters {
+  .characters__title {
+    margin: 0;
+    padding: 60px 38px 16px;
+    text-align: center;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: white;
+    @media screen and (min-width: 492px) {
+      font-size: 56px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .characters__containerCards {
+    @media screen and (min-width: 492px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .characters__textNotFound {
+    text-align: center;
+    color: white;
+    margin: 50px 0;
+  }
+}
